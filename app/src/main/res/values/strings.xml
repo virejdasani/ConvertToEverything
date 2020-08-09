@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Convert Everything</string>
+    <string name="enter_amount">Enter The Value/Amount:</string>
+    <string name="amount_hint">Eg. (1000)</string>
+    <string name="enter_unit">Enter The Unit:</string>
+    <string name="unit_hint">Eg. (ml / millilitres)</string>
+    <string name="convert_button">CONVERT TO EVERYTHING</string>
+    <string name="available_units_button">ALL AVAILABLE UNITS</string>
+    <string name="clear_text">Clear</string>
+    <string name="back_btn">BACK</string>
+    <string name="about_btn">Made by Virej Dasani</string>
+    <string name="invalid_unit">Sorry, that unit wasn\'t recognised…\nCheck all available units by clicking the option at the top.</string>
+    <string name="available_units">
+        VOLUME \n
+        1. ml/cc to litres, centilitres \n
+        2. cl to ml/cc, l \n
+        3. litre to ml/cc, centilitres, gallons \n
+        4. gallons to litres \n\n\n
+
+
+        DISTANCE \n
+        5. mm to cm, metres, inches, feet \n
+        6. cm to mm, metres, inches, feet \n
+        7. dm to mm, cm, m, inches, feet, yards \n
+        8. m to dm, cm, km, inches, feet, yards, miles \n
+        9. km to m, cm, dm, yards, miles \n
+        10. inches to mm, cm, dm, m, feet, yards \n
+        11. feet to mm, cm, dm, m, yards, inches \n
+        12. yards to cm, dm, m, km, inches, feet \n
+        13. miles to m, km \n\n\n
+
+
+        MASS \n
+        14. mg to g \n
+        15. g to mg, kg, pounds, ounces \n
+        16. kg to g, tonnes, pounds, ounces \n
+        17. tonnes to kg, pounds, ounces \n
+        18. pounds to g, kg, ounces \n
+        19. ounces to pounds, g, kg \n\n\n
+
+
+        TIME \n
+        20. sec to min, hr \n
+        21. min to sec, hr \n
+        22. hr to min, sec, days \n
+        23. days to hours, minutes, seconds, weeks, months, years \n\n\n
+
+
+        TEMPERATURE \n
+        24. celsius to fahrenheit, kelvin \n
+        25. fahrenheit to celsius, kelvin \n
+        26. kelvin to celsius, fahrenheit \n\n\n
+
+        ANGLES \n
+        27. radians to degrees \n
+        28. degrees to radians \n\n\n
+
+    </string>
+
+</resources>
