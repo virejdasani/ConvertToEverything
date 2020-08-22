@@ -64,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
             /*"millimetres", "centimetres",*/ "metres/m"/*,"kilometres", "decimetres",*/,
             "inches","feet", "miles", "yards",
             "radians", "degrees",
-            "kg", "grams", "mg","pounds", "ounces/oz","tonnes",
-            "sec", "min", "hr", "days",
-            "celsius", "fahrenheit", "kelvin" };
+            "kg", "grams", "milligrams","pounds", "ounces/oz","tonnes",
+            "sec", "min", "hr", "days", "months",
+            "celsius", "fahrenheit", "kelvin", "GB", "MB", "KB", "TB" };
     //\\----------------------------AUTOCOMPLETE ARRAY-------------------------------------
 
 
@@ -616,7 +616,7 @@ public class MainActivity extends AppCompatActivity {
                                 unit.equals("milligram")) {
 
 
-                    answer1 = round(amountFloat * 1000, 5);
+                    answer1 = round(amountFloat / 1000, 5);
 
                     finalAnswer1 = answer1.toString();
 
@@ -886,6 +886,25 @@ public class MainActivity extends AppCompatActivity {
 
                 //\\days to hours, minutes and seconds, weeks, months, years
 
+                //months to days, years
+                else if (
+                        unit.equals("months") ||
+                                unit.startsWith("month") ||
+                                unit.equals("month")) {
+
+                    //months to days
+                    answer1 = round(amountFloat * 30.417, 2);
+                    //months to years
+                    answer2 = round(amountFloat / 12, 3);
+
+                    finalAnswer1 = answer1.toString();
+                    finalAnswer2 = answer2.toString();
+
+                    answerTextView.setText((finalAnswer1 + "  days \n" +
+                            finalAnswer2 + "  years\n"));
+                }
+                //\\months to days, years
+
 
 
 //\\----------------------------------------------------TIME--------------------------------------------------------------------------
@@ -1013,6 +1032,102 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+//----------------------------------------------------STORAGE CAPACITY--------------------------------------------------------------------------
+
+
+                //kb to mb
+
+                else if (
+                        unit.equals("kb") ||
+                                unit.equals("kilobyte") ||
+                                unit.startsWith("kiloby")){
+
+                    //kb to mb
+                    answer1 = round(amountFloat / 1000, 3);
+
+
+                    finalAnswer1 = answer1.toString();
+
+                    answerTextView.setText((finalAnswer1 + "  MB\n"));
+                }
+                //\\kb to mb
+
+
+
+                //mb to kb, gb
+
+                else if (
+                        unit.equals("mb") ||
+                                unit.equals("megabyte") ||
+                                unit.startsWith("megaby")){
+
+                    //mb to kb
+                    answer1 = round(amountFloat * 1000, 3);
+                    //mb to gb
+                    answer2 = round(amountFloat / 1000, 3);
+
+
+                    finalAnswer1 = answer1.toString();
+                    finalAnswer2 = answer2.toString();
+
+                    answerTextView.setText((finalAnswer1 + "  MB\n" +
+                                            finalAnswer2 + "  GB\n"));
+                }
+                //\\mb to kb, gb
+
+
+
+                //gb to mb, tb
+
+                else if (
+                        unit.equals("gb") ||
+                                unit.equals("gigabyte") ||
+                                unit.startsWith("gigaby")){
+
+                    //gb to mb
+                    answer1 = round(amountFloat * 1000, 3);
+                    //gb to tb
+                    answer2 = round(amountFloat / 1000, 3);
+
+
+                    finalAnswer1 = answer1.toString();
+                    finalAnswer2 = answer2.toString();
+
+                    answerTextView.setText((finalAnswer1 + "  MB\n" +
+                            finalAnswer2 + "  TB\n"));
+                }
+                //\\gb to mb, tb
+
+
+
+                //tb to gb
+
+                else if (
+                        unit.equals("tb") ||
+                                unit.equals("terabyte") ||
+                                unit.startsWith("teraby")){
+
+                    //kb to mb
+                    answer1 = round(amountFloat * 1000, 3);
+
+
+                    finalAnswer1 = answer1.toString();
+
+                    answerTextView.setText((finalAnswer1 + "  GB\n"));
+                }
+                //\\tb to gb
+
+
+//\\--------------------------------------------------STORAGE CAPACITY--------------------------------------------------------------------------
+
+
+
+
+
+
+
                 //When unit is not recognised
                 else {
 
@@ -1072,23 +1187,29 @@ public class MainActivity extends AppCompatActivity {
         16. kg to g, tonnes, pounds, ounces \n
         17. tonnes to kg, pounds, ounces \n
         18. pounds to g, kg, ounces \n
-        19. ounces to pounds, g, kg \n
-
+        19. ounces to pounds, g, kg \n\n
 
 
         20. sec to min, hr \n
         21. min to sec, hr \n
         22. hr to min, sec, days \n
-        23. days to hours, minutes and seconds, weeks, months, years \n\n
+        23. days to hours, minutes and seconds, weeks, months, years
+        24. months to days, years \n\n
 
 
-        24. celsius to fahrenheit, kelvin \n
-        25. fahrenheit to celsius, kelvin \n
-        26. kelvin to celsius, fahrenheit \n\n
+        25. celsius to fahrenheit, kelvin \n
+        26. fahrenheit to celsius, kelvin \n
+        27. kelvin to celsius, fahrenheit \n\n
 
 
-        27. radians to degrees \n
-        28. degrees to radians \n\n
+        28. radians to degrees \n
+        29. degrees to radians \n\n
+
+        30. kb to mb \n
+        31. mb to kb, gb \n
+        32. gb to mb, tb \n
+        33. tb to gb \n\n
+
 
 
 

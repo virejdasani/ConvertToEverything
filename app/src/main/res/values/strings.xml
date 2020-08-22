@@ -43,17 +43,25 @@
         20. sec to min, hr \n
         21. min to sec, hr \n
         22. hr to min, sec, days \n
-        23. days to hours, minutes, seconds, weeks, months, years \n\n\n
+        23. days to hours, minutes, seconds, weeks, months, years\n
+        24. months to days, years \n\n\n
 
 
         TEMPERATURE \n
-        24. celsius to fahrenheit, kelvin \n
-        25. fahrenheit to celsius, kelvin \n
-        26. kelvin to celsius, fahrenheit \n\n\n
+        25. celsius to fahrenheit, kelvin \n
+        26. fahrenheit to celsius, kelvin \n
+        27. kelvin to celsius, fahrenheit \n\n\n
 
         ANGLES \n
-        27. radians to degrees \n
-        28. degrees to radians \n\n\n
+        28. radians to degrees \n
+        29. degrees to radians \n\n\n
+
+
+        STORAGE CAPACITY \n
+        30. kb to mb \n
+        31. mb to kb, gb \n
+        32. gb to mb, tb \n
+        33. tb to gb \n
 
     </string>
 
