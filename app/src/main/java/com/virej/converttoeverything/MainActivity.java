@@ -672,19 +672,39 @@ public class MainActivity extends AppCompatActivity {
                     answer3 = round(amountFloat * 2.205, 5);
                     //kg to ounces
                     answer4 = round(amountFloat * 35.274, 5);
+                    //kg to newtons
+                    answer5 = round(amountFloat * 9.81, 4);
 
                     finalAnswer1 = answer1.toString();
                     finalAnswer2 = answer2.toString();
                     finalAnswer3 = answer3.toString();
                     finalAnswer4 = answer4.toString();
+                    finalAnswer5 = answer5.toString();
 
                     answerTextView.setText((finalAnswer1 + "  grams\n" +
                             finalAnswer2 + "  tonnes \n" +
                             finalAnswer3 + "  pounds\n" +
-                            finalAnswer4 + "  ounces\n"));
+                            finalAnswer4 + "  ounces\n" +
+                            finalAnswer5 + "  newtons\n"));
                 }
 
                 //\\ kg to g, tonnes, pounds, ounces
+
+
+                //Newtons to kg
+                else if (
+                        unit.equals("newton") ||
+                                unit.startsWith("newton") ||
+                                unit.equals("newtons")) {
+
+                    //newtons to kg
+                    answer1 = round(amountFloat * 0.10197, 4);
+
+                    finalAnswer1 = answer1.toString();
+
+                    answerTextView.setText((finalAnswer1 + "  kg\n"));
+                }
+                //\\Newtons to kg
 
 
                 // tonnes to kg, pounds, ounces
@@ -1184,31 +1204,32 @@ public class MainActivity extends AppCompatActivity {
 
         14. mg to g \n
         15. g to mg, kg, pounds, ounces \n
-        16. kg to g, tonnes, pounds, ounces \n
+        16. kg to g, tonnes, pounds, ounces, newtons \n
         17. tonnes to kg, pounds, ounces \n
-        18. pounds to g, kg, ounces \n
-        19. ounces to pounds, g, kg \n\n
+        18. newtons to kg
+        19. pounds to g, kg, ounces \n
+        20. ounces to pounds, g, kg \n\n
 
 
-        20. sec to min, hr \n
-        21. min to sec, hr \n
-        22. hr to min, sec, days \n
-        23. days to hours, minutes and seconds, weeks, months, years
-        24. months to days, years \n\n
+        21. sec to min, hr \n
+        22. min to sec, hr \n
+        23. hr to min, sec, days \n
+        24. days to hours, minutes and seconds, weeks, months, years
+        25. months to days, years \n\n
 
 
-        25. celsius to fahrenheit, kelvin \n
-        26. fahrenheit to celsius, kelvin \n
-        27. kelvin to celsius, fahrenheit \n\n
+        26. celsius to fahrenheit, kelvin \n
+        27. fahrenheit to celsius, kelvin \n
+        28. kelvin to celsius, fahrenheit \n\n
 
 
-        28. radians to degrees \n
-        29. degrees to radians \n\n
+        29. radians to degrees \n
+        30. degrees to radians \n\n
 
-        30. kb to mb \n
-        31. mb to kb, gb \n
-        32. gb to mb, tb \n
-        33. tb to gb \n\n
+        31. kb to mb \n
+        32. mb to kb, gb \n
+        33. gb to mb, tb \n
+        34. tb to gb \n\n
 
 
 
